@@ -1,0 +1,43 @@
+@import 'styles/config';
+
+@value defaultSpacing: #{$defaultSpacing};
+
+.projects {
+  &Description {
+    margin-bottom: $defaultSpacing;
+  }
+
+  &Slider {
+    &Icon {
+      height: 100%;
+      font-size: 2rem;
+      cursor: pointer;
+      user-select: none;
+
+      &:hover {
+        color: $main;
+      }
+
+      &Back {
+        margin-right: $defaultSpacing;
+      }
+
+      &Next {
+        margin-left: $defaultSpacing;
+      }
+    }
+  }
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform .25s ease-out;
+
+  &Name {
+    line-height: 2.5;
+    text-align: center;
+  }
+}

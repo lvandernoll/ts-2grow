@@ -1,14 +1,33 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import 'wired-elements';
 import styles from './App.module.scss';
 import Header from 'components/Header';
 import LandingSection from 'sections/Landing';
 import AmbitionsSection from 'sections/Ambitions';
 import WhoAreWeSection from 'sections/WhoAreWe';
-import OurServicesSection from 'sections/OurServices';
+import ServicesSection from 'sections/Services';
 import WayOfWorkingSection from 'sections/WayOfWorking';
+import ProjectsSection from 'sections/Projects';
 
 const App: React.FC = () => {
+  useEffect(() => {
+    if(window.location.pathname !== '/') {
+      try {
+        const section: HTMLElement | null = document.querySelector(`#${window.location.pathname.slice(1)}`);
+        if(section) {
+          setTimeout(()=>{
+            window.scrollTo({
+              top: section.offsetTop - +styles.headerHeight.slice(0, -2),
+              behavior: 'smooth',
+            });
+          }, 500);
+        }
+      } catch(e) {
+        console.error(e);
+      }
+    }
+  });
+
   return (
     <>
       <Header />
@@ -16,8 +35,9 @@ const App: React.FC = () => {
         <LandingSection />
         <AmbitionsSection />
         <WhoAreWeSection />
-        <OurServicesSection />
+        <ServicesSection />
         <WayOfWorkingSection />
+        <ProjectsSection />
       </div>
     </>
   );

@@ -7,8 +7,8 @@ import arrow2 from 'img/arrow2.svg';
 import arrow3 from 'img/arrow3.svg';
 
 const WayOfWorkingSection: React.FC = () =>
-  <Section name='onze-werkwijze' className={styles.wayOfWorking}>
-    <h3>{'Onze werkwijze'}</h3>
+  <Section name='werkwijze' className={styles.wayOfWorking}>
+    <h3>{'Werkwijze'}</h3>
     <div className={styles.wayOfWorkingRow}>
       <WayOfWorkingItem title={'Kennismaken'}>
         {'Wanneer jullie gebruik willen maken van onze diensten, komen we graag eens langs voor een oriënterend gesprek. Tijdens dit gesprek kunnen we jullie wensen inventariseren, maar ook laten zien wat we voor jullie kunnen betekenen.'}

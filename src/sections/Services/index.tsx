@@ -1,12 +1,12 @@
 import React from 'react';
 import Section from 'components/Section';
-import styles from './OurServices.module.scss';
+import styles from './Services.module.scss';
 import AccordeonTab from 'components/AccordeonTab';
 
-const OurServicesSection: React.FC = () =>
-  <Section name='onze-diensten' className={styles.services}>
+const ServicesSection: React.FC = () =>
+  <Section name='diensten' className={styles.services}>
     <div className={styles.servicesContent}>
-      <h3>{'Onze diensten'}</h3>
+      <h3>{'Diensten'}</h3>
       <div className={styles.servicesAccordeon}>
         <AccordeonTab initialActive
           header={'Het maken van een (persoonlijk) tuinontwerp'}
@@ -36,4 +36,4 @@ const OurServicesSection: React.FC = () =>
     </div>
   </Section>
 
-export default OurServicesSection;
+export default ServicesSection;

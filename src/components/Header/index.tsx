@@ -30,10 +30,11 @@ const Header: React.FC = () => {
           </div>
           <nav className={styles.headerNav}>
             <ul className={styles.headerNavList}>
-              <NavButton sectionId='onze-ambities' text='Onze ambities' />
+              <NavButton sectionId='ambities' text='Ambities' />
               <NavButton sectionId='wie-zijn-wij' text='Wie zijn wij' />
-              <NavButton sectionId='onze-diensten' text='Onze diensten' />
-              <NavButton sectionId='onze-werkwijze' text='Onze werkwijze' />
+              <NavButton sectionId='diensten' text='Diensten' />
+              <NavButton sectionId='werkwijze' text='Werkwijze' />
+              <NavButton sectionId='projecten' text='Projecten' />
             </ul>
           </nav>
         </div>
