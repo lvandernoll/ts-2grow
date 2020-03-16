@@ -1,0 +1,15 @@
+@import 'styles/config';
+
+.services {
+  display: flex;
+
+  &Content {
+    margin-right: $defaultSpacing;
+    width: 100%;
+  }
+
+  &Accordeon {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}

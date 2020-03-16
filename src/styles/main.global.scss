@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Lemonada&display=swap');
+@import './vendor/reset.css';
+@import './config';
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $defaultFont;
+}
+
+body {
+  min-height: 100vh;
+  background: $white;
+  padding: $sitePadding !important;
+}
+
+h3 {
+  font-size: 2rem !important;
+  margin-bottom: 10px !important;
+}

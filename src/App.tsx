@@ -1,25 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import 'wired-elements';
+import styles from './App.module.scss';
+import Header from 'components/Header';
+import LandingSection from 'sections/Landing';
+import AmbitionsSection from 'sections/Ambitions';
+import WhoAreWeSection from 'sections/WhoAreWe';
+import OurServicesSection from 'sections/OurServices';
+import WayOfWorkingSection from 'sections/WayOfWorking';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <div className={styles.content}>
+        <LandingSection />
+        <AmbitionsSection />
+        <WhoAreWeSection />
+        <OurServicesSection />
+        <WayOfWorkingSection />
+      </div>
+    </>
   );
 }
 

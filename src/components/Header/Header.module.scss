@@ -1,0 +1,75 @@
+@import 'styles/config';
+
+@value mainColor: #{$main};
+@value headerHeight: #{$headerHeight};
+$headerHeightSmall: $headerHeight / 1.5;
+
+.header {
+  height: $headerHeight;
+  width: calc(100% - #{$defaultSpacing});
+  max-width: $siteMaxWidth;
+  padding: 0 $defaultSpacing;
+  color: $secondary;
+  position: fixed;
+  z-index: 1000;
+  left: 50%;
+  opacity: 1;
+  transform: translateX(-50%);
+  transition: height .45s ease-in-out;
+
+  &Content {
+    display: flex;
+    width: 100%;
+    height: $headerHeight;
+    justify-content: space-between;
+    align-items: center;
+    transition: height .45s ease-in-out;
+  }
+
+  &Branding {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    &Logo {
+      height: calc(100% - 5px);
+      margin-right: 10px;
+    }
+  }
+
+  &Nav {
+    margin-left: 20px;
+
+    &List {
+      display: flex;
+
+      &Item {
+        &:not(:last-child) {
+          margin-right: $defaultSpacing;
+        }
+
+        &Button {
+          background: $secondary;
+          color: $black;
+          font-family: sans-serif;
+          font-size: 1.05rem;
+          transition: font-size .45s ease-in-out;
+        }
+      }
+    }
+  }
+
+  &Opened {
+    height: $headerHeightSmall;
+  }
+
+  &Opened &Content {
+    height: $headerHeightSmall;
+  }
+
+  &Opened &NavListItemButton {
+    font-size: .75rem;
+  }
+}

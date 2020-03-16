@@ -1,0 +1,9 @@
+@import 'styles/config';
+
+@value headerHeight: #{$headerHeight};
+
+.content {
+  max-width: $siteMaxWidth;
+  margin: 0 auto;
+  padding-top: $headerHeight;
+}

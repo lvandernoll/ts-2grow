@@ -1,0 +1,19 @@
+@import 'styles/config';
+
+.ambitions {
+  display: flex;
+
+  &Content {
+    margin-right: $defaultSpacing;
+
+    &Paragraph {
+      line-height: 2;
+      text-decoration: underline;
+    }
+  }
+  
+  &Img {
+    height: 100%;
+    width: auto;
+  }
+}

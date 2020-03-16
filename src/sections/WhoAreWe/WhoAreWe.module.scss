@@ -1,0 +1,37 @@
+@import 'styles/config';
+
+.whoAreWe {
+  display: flex;
+  flex-direction: column;
+
+  &Item {
+    display: flex;
+
+    &Portret {
+      width: 40%;
+      margin-right: $defaultSpacing;
+    }
+
+    &Info {
+      width: 150%;
+    }
+
+    &Portfolio {
+      display: flex;
+      margin-top: $defaultSpacing;
+
+      &Photo {
+        width: 33%;
+
+        &:not(:last-child) {
+          margin-right: $defaultSpacing;
+        }
+      }
+    }
+  }
+
+  &Divider {
+    margin: $defaultSpacing 0;
+    height: 5px;
+  }
+}

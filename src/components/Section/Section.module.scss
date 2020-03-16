@@ -1,0 +1,9 @@
+@import 'styles/config';
+
+@value headerHeight: #{$headerHeight};
+
+.section {
+  padding: $defaultSpacing;
+  margin-top: $defaultSpacing;
+  width: 100%;
+}
