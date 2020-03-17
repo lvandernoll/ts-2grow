@@ -7,7 +7,11 @@
     margin-bottom: $defaultSpacing;
   }
 
-  &Slider {
+  &Carousel {
+    display: flex;
+    align-items: center;
+    position: relative;
+
     &Icon {
       height: 100%;
       font-size: 2rem;
@@ -18,26 +22,75 @@
         color: $main;
       }
 
-      &Back {
-        margin-right: $defaultSpacing;
-      }
+    }
 
-      &Next {
-        margin-left: $defaultSpacing;
-      }
+    &Content {
+      margin: 0 #{$defaultSpacing / 2};
+      height: 250px;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      white-space: nowrap;
     }
   }
 }
 
 .project {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: inline-block;
   cursor: pointer;
-  transition: transform .25s ease-out;
+  max-width: 297px;
+  padding: 0 #{$defaultSpacing / 2};
 
   &Name {
     line-height: 2.5;
     text-align: center;
+  }
+
+  &Popup {
+    &::before {
+      position: fixed;
+      display: flex;
+      content: '';
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba($black, .6);
+      z-index: 2000;
+    }
+
+    &Content {
+      position: fixed;
+      cursor: auto;
+      top: 50%;
+      left: 50%;
+      width: 75%;
+      height: 75%;
+      background: $white;
+      z-index: 2500;
+      transform: translate(-50%, -50%);
+
+      &Header {
+        display: flex;
+        justify-content: space-between;
+        font-size: 2rem;
+        padding: $defaultSpacing;
+        background: $main;
+        color: $white;
+
+        &Cross {
+          cursor: pointer;
+        }
+      }
+
+      &Pictures {
+        padding: $defaultSpacing;
+        display: flex;
+        justify-content: space-between;
+
+        &Item {
+          width: calc(33% - #{$defaultSpacing / 2};
+        }
+      }
+    }
   }
 }
