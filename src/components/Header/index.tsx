@@ -35,6 +35,7 @@ const Header: React.FC = () => {
               <NavButton sectionId='diensten' text='Diensten' />
               <NavButton sectionId='werkwijze' text='Werkwijze' />
               <NavButton sectionId='projecten' text='Projecten' />
+              <NavButton sectionId='contact' text='Contact' />
             </ul>
           </nav>
         </div>

@@ -8,6 +8,7 @@ import WhoAreWeSection from 'sections/WhoAreWe';
 import ServicesSection from 'sections/Services';
 import WayOfWorkingSection from 'sections/WayOfWorking';
 import ProjectsSection from 'sections/Projects';
+import ContactSection from 'sections/Contact';
 
 const App: React.FC = () => {
   useEffect(() => {
@@ -38,6 +39,7 @@ const App: React.FC = () => {
         <ServicesSection />
         <WayOfWorkingSection />
         <ProjectsSection />
+        <ContactSection />
       </div>
     </>
   );

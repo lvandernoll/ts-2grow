@@ -1,6 +1,7 @@
 @import 'styles/config';
 
 @value headerHeight: #{$headerHeight};
+@value mainColor: #{$main};
 
 .section {
   padding: $defaultSpacing;
