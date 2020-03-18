@@ -1,0 +1,89 @@
+@import 'styles/config';
+
+.pricing {
+  &Content {
+    display: flex;
+  }
+
+  &Table {
+    margin-top: 60px;
+
+    &Header, &Col {
+      padding: $defaultSpacing / 4;
+    }
+
+    &Header {
+      text-align: left;
+      font-weight: bold;
+      max-width: 130px;
+
+      &Rotated {
+        transform: rotate(-45deg) translate(17%, -150%);
+      }
+    }
+
+    &Col {
+      &Price {
+        display: block;
+        text-align-last: justify;
+      }
+
+      &Bold {
+        font-weight: bold;
+        text-decoration: underline;
+      }
+    }
+
+    &Row {
+      &:nth-child(even) {
+        background: rgba($main, .2);
+      }
+    }
+
+    &Row &Header, &Row &Col:not(:last-child) {
+      border-right: 1px solid rgba($main, .5);
+    }
+  }
+
+  &Download {
+    display: flex;
+    flex-direction: column;
+    margin: 54px $defaultSpacing 26px $defaultSpacing;
+
+    &Header {
+      font-weight: bold;
+      margin-bottom: 5px;
+      line-height: 1.65;
+    }
+
+    &Block {
+      display: flex;
+      align-items: center;
+      background: rgba($main, .2);
+      height: 100%;
+      font-size: .9rem;
+    }
+
+    &Name {
+      margin-left: $defaultSpacing / 2;
+      margin-right: auto;
+    }
+
+    &Button {
+      padding: $defaultSpacing / 2;
+      margin-left: $defaultSpacing / 2;
+      border: 2px solid rgba($main, .2);
+      font-size: 1.75rem;
+      color: $black;
+      cursor: pointer;
+      background: $white;
+      height: 100%;
+      display: flex;
+      align-items: center;
+
+      &:hover, &:focus {
+        color: $main;
+      }
+    }
+  }
+}

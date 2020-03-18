@@ -9,6 +9,7 @@ import ServicesSection from 'sections/Services';
 import WayOfWorkingSection from 'sections/WayOfWorking';
 import ProjectsSection from 'sections/Projects';
 import ContactSection from 'sections/Contact';
+import PricingSection from 'sections/Pricing';
 
 const App: React.FC = () => {
   useEffect(() => {
@@ -39,6 +40,7 @@ const App: React.FC = () => {
         <ServicesSection />
         <WayOfWorkingSection />
         <ProjectsSection />
+        <PricingSection />
         <ContactSection />
       </div>
     </>
