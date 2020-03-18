@@ -3,10 +3,11 @@ import styles from '../Projects.module.scss';
 
 interface Props {
   name: string,
+  description: string,
   pictures: string[],
 }
 
-const ProjectItem: React.FC<Props> = ({ name, pictures }) => {
+const ProjectItem: React.FC<Props> = ({ name, description, pictures }) => {
   const [popupActive, setPopupActive] = useState(false);
 
   return (
@@ -20,10 +21,13 @@ const ProjectItem: React.FC<Props> = ({ name, pictures }) => {
               <span>{name}</span>
               <span onClick={() => setPopupActive(false)} className={styles.projectPopupContentHeaderCross}>X</span>
             </h5>
-            <div className={styles.projectPopupContentPictures}>
-              {pictures.map((picture: string, i: number) =>
-                <wired-image key={i} src={picture} alt={`foto ${name} ${i}`} class={styles.projectPopupContentPicturesItem} />
-              )}
+            <div className={styles.projectPopupContentInfo}>
+              <p className={styles.projectPopupContentInfoDescription}>{description}</p>
+              <div className={styles.projectPopupContentPictures}>
+                {pictures.map((picture: string, i: number) =>
+                  <wired-image key={i} src={picture} alt={`foto ${name} ${i}`} class={styles.projectPopupContentPicturesItem} />
+                )}
+              </div>
             </div>
           </div>
         </div>

@@ -22,6 +22,9 @@
         color: $main;
       }
 
+      &Hidden {
+        visibility: hidden;
+      }
     }
 
     &Content {
@@ -64,7 +67,6 @@
       top: 50%;
       left: 50%;
       width: 75%;
-      height: 75%;
       background: $white;
       z-index: 2500;
       transform: translate(-50%, -50%);
@@ -82,13 +84,21 @@
         }
       }
 
-      &Pictures {
+      &Info {
         padding: $defaultSpacing;
+        
+        &Description {
+          white-space: pre-wrap;
+          margin-bottom: $defaultSpacing;
+        }
+      }
+
+      &Pictures {
         display: flex;
         justify-content: space-between;
 
         &Item {
-          width: calc(33% - #{$defaultSpacing / 2};
+          width: calc(33% - #{$defaultSpacing / 2});
         }
       }
     }
