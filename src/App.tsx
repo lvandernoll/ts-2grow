@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import 'wired-elements';
 import styles from './App.module.scss';
 import Header from 'components/Header';
 import LandingSection from 'sections/Landing';

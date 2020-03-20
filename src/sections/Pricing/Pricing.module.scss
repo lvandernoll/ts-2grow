@@ -3,6 +3,7 @@
 .pricing {
   &Content {
     display: flex;
+    justify-content: space-evenly;
   }
 
   &Table {
@@ -35,7 +36,7 @@
     }
 
     &Row {
-      &:nth-child(even) {
+      &:nth-child(odd) {
         background: rgba($main, .2);
       }
     }
@@ -48,7 +49,8 @@
   &Download {
     display: flex;
     flex-direction: column;
-    margin: 54px $defaultSpacing 26px $defaultSpacing;
+    margin: 0 $defaultSpacing 26px $defaultSpacing;
+    align-self: flex-end;
 
     &Header {
       font-weight: bold;
@@ -60,13 +62,20 @@
       display: flex;
       align-items: center;
       background: rgba($main, .2);
-      height: 100%;
       font-size: .9rem;
+      height: 78px;
     }
 
-    &Name {
+    &Text {
+      display: flex;
+      flex-direction: column;
       margin-left: $defaultSpacing / 2;
       margin-right: auto;
+    }
+
+    &Size {
+      font-size: .75rem;
+      margin-top: $defaultSpacing / 2;
     }
 
     &Button {

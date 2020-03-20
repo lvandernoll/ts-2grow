@@ -17,7 +17,7 @@ const ContactSection: React.FC = () => {
             <FontAwesomeIcon icon={faPhone} className={styles.contactLinksItemIcon} />
             <span>{'06 - 40 11 98 33'}</span>
           </a>
-          <a href='https://goo.gl/maps/tZonVcE3nVbk3ERQA' target='_blank' className={styles.contactLinksItem}>
+          <a href='https://goo.gl/maps/tZonVcE3nVbk3ERQA' target='_blank' rel='noopener noreferrer' className={styles.contactLinksItem}>
             <FontAwesomeIcon icon={faMapMarkerAlt} className={styles.contactLinksItemIcon} />
             <span>{'Korte Kruisweg 82, 2678 BS Maasdijk'}</span>
           </a>
@@ -25,7 +25,7 @@ const ContactSection: React.FC = () => {
             <FontAwesomeIcon icon={faEnvelope} className={styles.contactLinksItemIcon} />
             <span>{'2growtuinontwerp@gmail.com'}</span>
           </a>
-          <a href='https://www.facebook.com/2GrowTuinontwerp/' target='_blank' className={styles.contactLinksItem}>
+          <a href='https://www.facebook.com/2GrowTuinontwerp/' target='_blank' rel='noopener noreferrer' className={styles.contactLinksItem}>
             <FontAwesomeIcon icon={['fab', 'facebook']} className={styles.contactLinksItemIcon} />
             <span>{'2GrowTuinontwerp'}</span>
           </a>

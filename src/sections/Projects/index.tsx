@@ -17,7 +17,7 @@ const ProjectsSection: React.FC = () => {
       setMaxScroll(element.scrollWidth - element.offsetWidth);
       window.addEventListener('resize', () => setMaxScroll(element.scrollWidth - element.offsetWidth));
     }
-  });
+  }, []);
 
   const scroll = (back: boolean = false) => {
     const element: HTMLDivElement | null = carousel.current;
