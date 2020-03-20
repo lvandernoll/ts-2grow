@@ -34,4 +34,35 @@
     margin: $defaultSpacing 0;
     height: 5px;
   }
+
+  @include breakpoint($mobile) {
+    &Item {
+      flex-direction: column;
+
+      &Portret {
+        margin: $defaultSpacing / 2 auto;
+        width: 80%;
+      }
+
+      &Info {
+        width: unset;
+
+        &Name {
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          
+          &Dash {
+            display: none;
+          }
+          
+          &Title {
+            margin-top: $defaultSpacing / 4;
+            margin-bottom: $defaultSpacing / 2;
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
 }

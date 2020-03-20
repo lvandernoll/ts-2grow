@@ -4,6 +4,10 @@
 @value headerHeight: #{$headerHeight};
 $headerHeightSmall: $headerHeight / 1.5;
 
+.mobileHeader {
+  display: none;
+}
+
 .header {
   height: $headerHeight;
   width: calc(100% - #{$defaultSpacing});
@@ -15,7 +19,7 @@ $headerHeightSmall: $headerHeight / 1.5;
   left: 50%;
   opacity: 1;
   transform: translateX(-50%);
-  transition: height .45s ease-in-out;
+  transition: height .45s ease-in-out, opacity .45s ease-in-out;
 
   &Content {
     display: flex;
@@ -71,5 +75,17 @@ $headerHeightSmall: $headerHeight / 1.5;
 
   &Opened &NavListItemButton {
     font-size: .75rem;
+  }
+
+  @include breakpoint($mobile) {
+    width: 100%;
+
+    &Nav {
+      display: none;
+    }
+
+    &Opened {
+      opacity: 0;
+    }
   }
 }

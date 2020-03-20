@@ -31,4 +31,14 @@
       }
     }
   }
+
+  @include breakpoint($mobile) {
+    &LinksItem {
+      font-size: .85rem;
+
+      &Icon {
+        font-size: 1.4rem;
+      }
+    }
+  }
 }

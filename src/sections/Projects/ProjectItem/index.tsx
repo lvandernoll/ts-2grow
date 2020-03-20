@@ -10,8 +10,14 @@ interface Props {
 const ProjectItem: React.FC<Props> = ({ name, description, pictures }) => {
   const [popupActive, setPopupActive] = useState(false);
 
+  const togglePopup = () => {
+    const body: HTMLElement | null = document.querySelector('body');
+    if(body) body.style.overflow = popupActive ? 'auto' : 'hidden';
+    setPopupActive(!popupActive);
+  }
+
   return (
-    <article onClick={() => setPopupActive(!popupActive)} className={styles.project}>
+    <article onClick={togglePopup} className={styles.project}>
       <wired-image src={pictures[0]} alt={name} />
       <h4 className={styles.projectName}>{name}</h4>
       {popupActive &&
@@ -19,7 +25,7 @@ const ProjectItem: React.FC<Props> = ({ name, description, pictures }) => {
           <div onClick={e => e.stopPropagation()} className={styles.projectPopupContent}>
             <h5 className={styles.projectPopupContentHeader}>
               <span>{name}</span>
-              <span onClick={() => setPopupActive(false)} className={styles.projectPopupContentHeaderCross}>X</span>
+              <span onClick={togglePopup} className={styles.projectPopupContentHeaderCross}>X</span>
             </h5>
             <div className={styles.projectPopupContentInfo}>
               <p className={styles.projectPopupContentInfoDescription}>{description}</p>

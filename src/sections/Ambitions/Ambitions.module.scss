@@ -2,8 +2,10 @@
 
 .ambitions {
   display: flex;
+  flex-direction: column;
 
   &Content {
+    display: flex;
     margin-right: $defaultSpacing;
 
     &Paragraph {
@@ -11,9 +13,21 @@
       text-decoration: underline;
     }
   }
-  
+
   &Img {
     height: 100%;
     width: auto;
+    margin: auto $defaultSpacing / 2;
+  }
+
+  @include breakpoint($mobile) {
+    &Content {
+      flex-direction: column-reverse;
+    }
+
+    &Img {
+      width: 75%;
+      margin: $defaultSpacing / 2 auto;
+    }
   }
 }

@@ -32,10 +32,7 @@
     max-width: 65%;
     min-width: 450px;
     margin-top: 50px;
-
-    &:last-of-type {
-      margin-bottom: 50px;
-    }
+    margin-bottom: 50px;
 
     &:nth-child(even) {
       margin-left: 2%;
@@ -50,6 +47,31 @@
         font-size: 3.2rem;
         margin-right: 5px;
         content: counter(wayOfWorkingItem);
+      }
+    }
+  }
+
+  @include breakpoint($tablet) {
+    &Row {
+      padding: 0;
+
+      &:nth-child(odd) {
+        justify-content: unset;
+      }
+
+      &Arrow {
+        display: none;
+      }
+    }
+
+    &Item {
+      min-width: unset;
+      max-width: unset;
+      margin-top: 0;
+      margin-bottom: 25px;
+
+      &:nth-child(even) {
+        margin-left: 0;
       }
     }
   }

@@ -86,7 +86,9 @@
 
       &Info {
         padding: $defaultSpacing;
-        
+        overflow-y: scroll;
+        height: 100%;
+
         &Description {
           white-space: pre-wrap;
           margin-bottom: $defaultSpacing;
@@ -100,6 +102,24 @@
         &Item {
           width: calc(33% - #{$defaultSpacing / 2});
         }
+      }
+    }
+  }
+
+  @include breakpoint($mobile) {
+    &PopupContent {
+      transform: none;
+      width: calc(100% - 20px);
+      top: 10px;
+      left: 10px;
+      bottom: 10px;
+
+      &Header {
+        font-size: 1.2rem;
+      }
+
+      &Info {
+        height: calc(100% - 80px);
       }
     }
   }

@@ -23,4 +23,14 @@
   &Intro {
     line-height: 1.25;
   }
+
+  @include breakpoint($mobile) {
+    padding: $defaultSpacing * 2 $defaultSpacing;
+    height: unset;
+
+    &Heading {
+      font-size: 2.4rem;
+      margin-bottom: 20px;
+    }
+  }
 }
