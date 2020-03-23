@@ -32,6 +32,7 @@ $headerHeightSmall: $headerHeight / 1.5;
     align-items: center;
     font-size: 1.5rem;
     font-weight: bold;
+    cursor: pointer;
 
     &Logo {
       height: calc(100% - 5px);
