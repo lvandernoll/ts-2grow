@@ -28,11 +28,11 @@ const App: React.FC = () => {
             });
           }, 500);
         }
-        setWindowLoaded(true);
       } catch(e) {
         console.error(e);
       }
     }
+    setWindowLoaded(true);
 
     const headerHeight: number = +styles.headerHeight.slice(0, -2);
     updateScroll(headerHeight);
