@@ -22,6 +22,7 @@
 
       &Photo {
         width: 33%;
+        cursor: pointer;
 
         &:not(:last-child) {
           margin-right: $defaultSpacing;
@@ -62,6 +63,92 @@
             font-size: 1.2rem;
           }
         }
+      }
+    }
+  }
+}
+
+.carousel {
+  &::before {
+    cursor: pointer;
+    content: '';
+    background: rgba($black, .6);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    position: fixed;
+    z-index: 2500;
+  }
+
+  &Content {
+    user-select: none;
+    z-index: 2600;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &Img {
+      max-width: 700px;
+    }
+
+    &Arrows {
+      display: flex;
+      color: $white;
+      font-size: 2rem;
+      justify-content: space-around;
+      margin: $defaultSpacing 30% 0;
+
+      &Icon {
+        cursor: pointer;
+  
+        &:hover, &:focus {
+          color: $main;
+        }
+
+        &Hidden {
+          visibility: hidden;
+        }
+      }
+    }
+
+    &Index {
+      display: flex;
+      align-items: center;
+
+      &Circle {
+        font-size: .8rem;
+        margin: 0 5px;
+
+        &Active {
+          color: $grey;
+        }
+      }
+    }
+  }
+
+  @include breakpoint($tablet) {
+    &Content {
+      &Img {
+        max-width: calc(100vw - 200px);
+      }
+    }
+  }
+
+  @include breakpoint($mobile) {
+    &Content {
+      &Img {
+        max-width: calc(100vw - 100px);
+      }
+    }
+  }
+
+  @include breakpoint(450px) {
+    &Content {
+      &Img {
+        max-width: calc(100vw - 20px);
       }
     }
   }

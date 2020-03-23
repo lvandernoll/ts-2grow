@@ -2,9 +2,6 @@ import React from 'react';
 import Section from 'components/Section';
 import WayOfWorkingItem from './WayOfWorkingItem';
 import styles from './WayOfWorking.module.scss';
-import arrow1 from 'img/arrow1.svg';
-import arrow2 from 'img/arrow2.svg';
-import arrow3 from 'img/arrow3.svg';
 
 const WayOfWorkingSection: React.FC = () =>
   <Section name='werkwijze' className={styles.wayOfWorking}>

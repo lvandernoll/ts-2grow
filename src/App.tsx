@@ -34,18 +34,18 @@ const App: React.FC = () => {
     }
     setWindowLoaded(true);
 
+    const updateScroll = (headerHeight: number) => {
+      if(!scrolledDown && window.scrollY > headerHeight) {
+        setScrolledDown(true);
+      } else if(scrolledDown && window.scrollY <= headerHeight) {
+        setScrolledDown(false);
+      }
+    }
+
     const headerHeight: number = +styles.headerHeight.slice(0, -2);
     updateScroll(headerHeight);
     window.addEventListener('scroll', () => updateScroll(headerHeight));
-  });
-
-  const updateScroll = (headerHeight: number) => {
-    if(!scrolledDown && window.scrollY > headerHeight) {
-      setScrolledDown(true);
-    } else if(scrolledDown && window.scrollY <= headerHeight) {
-      setScrolledDown(false);
-    }
-  }
+  }, [windowLoaded, scrolledDown]);
 
   const scrollUp = () => {
     window.scrollTo({

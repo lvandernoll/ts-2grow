@@ -21,7 +21,6 @@ declare global {
       'wired-button': any,
       'wired-image': any,
       'wired-fab': any,
-      'mwc-icon': any,
     }
   }
 }
