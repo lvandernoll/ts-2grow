@@ -4,9 +4,10 @@ import styles from '../Header.module.scss';
 interface Props {
   sectionId: string,
   text: string,
+  scrollFn: (sectionId: string) => void,
 }
 
-const NavButton: React.FC<Props> = ({ sectionId, text }) => {
+const NavButton: React.FC<Props> = ({ sectionId, text, scrollFn }) => {
   const [inView, setInView] = useState(false);
   const [hover, setHover] = useState(false);
 
@@ -27,21 +28,8 @@ const NavButton: React.FC<Props> = ({ sectionId, text }) => {
     }
   });
 
-  const scrollToSection = () => {
-    const section: HTMLElement | null = document.querySelector(`#${sectionId}`);
-    const headerHeight: number = +styles.headerHeight.slice(0, -2);
-
-    if(section) {
-      window.scrollTo({
-        top: section.offsetTop - headerHeight,
-        behavior: 'smooth',
-      });
-      window.history.replaceState(null, '', sectionId);
-    }
-  }
-
   return (
-    <li onClick={scrollToSection} onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)} className={styles.headerNavListItem}>
+    <li onClick={() => scrollFn(sectionId)} onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)} className={styles.headerNavListItem}>
       <wired-button elevation={inView ? 4 : hover ? 3 : 0} id={`${sectionId}Button`} class={styles.headerNavListItemButton}>
         {text}
       </wired-button>

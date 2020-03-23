@@ -11,7 +11,7 @@ $headerHeightSmall: $headerHeight / 1.5;
   padding: 0 $defaultSpacing;
   color: $secondary;
   position: fixed;
-  z-index: 1000;
+  z-index: 2000;
   left: 50%;
   opacity: 1;
   transform: translateX(-50%);
@@ -101,5 +101,89 @@ $headerHeightSmall: $headerHeight / 1.5;
 
   @include breakpoint($mobile) {
     width: 100%;
+  }
+}
+
+.hamburger {
+  display: none;
+
+  @include breakpoint(800px) {
+    display: unset;
+    opacity: 1;
+    transition: opacity .45s ease-in-out;
+
+    &Hidden {
+      opacity: 0;
+    }
+
+    &Button {
+      color: transparent;
+      z-index: 2100;
+      position: fixed;
+      top: $defaultSpacing;
+      right: $defaultSpacing;
+      height: 50px;
+      width: 50px;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      &:active &Icon {
+        transform: scale(1.1);
+      }
+      
+      &Icon {
+        transition: transform 0.2s ease 0s, opacity 0.2s ease 0s;
+        color: $white;
+        font-size: 1.5rem;
+      }
+    }
+
+    &Menu {
+      max-height: 0;
+      position: fixed;
+      z-index: 1800;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      overflow: hidden;
+      color: $white;
+      transition: max-height .45s ease-in-out, padding-top .45s ease-in-out;
+      opacity: 1;
+      padding: 0 $defaultSpacing;
+
+      &Nav {
+        opacity: 0;
+        transition: opacity 1s ease-in;
+        padding: $headerHeight + $defaultSpacing $defaultSpacing / 2 $defaultSpacing / 2 ;
+
+        &Item {
+          font-size: 1.75rem;
+          margin-bottom: $defaultSpacing;
+        }
+      }
+
+      &Opened {
+        max-height: 100vh;
+        padding: $defaultSpacing;
+      }
+
+      &Opened &Nav {
+        opacity: 1;
+      }
+    }
+  }
+
+  @include breakpoint($mobile) {
+    &Button {
+      top: $defaultSpacing / 1.5;
+      right: $defaultSpacing / 1.5;
+    }
+
+    &Menu {
+      padding: 0 $defaultSpacing / 2;
+    }
   }
 }

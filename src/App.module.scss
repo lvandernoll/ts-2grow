@@ -11,9 +11,9 @@
 .icon {
   display: none;
 
-  @include breakpoint($mobile) {
+  @include breakpoint(800px) {
     display: unset;
-    z-index: 3000;
+    z-index: 2000;
     color: $white;
     width: 50px;
     height: 50px;

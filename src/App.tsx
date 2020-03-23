@@ -14,9 +14,10 @@ import PricingSection from 'sections/Pricing';
 
 const App: React.FC = () => {
   const [scrolledDown, setScrolledDown] = useState(false);
+  const [windowLoaded, setWindowLoaded] = useState(false);
 
   useEffect(() => {
-    if(window.location.pathname !== '/') {
+    if(!windowLoaded && window.location.pathname !== '/') {
       try {
         const section: HTMLElement | null = document.querySelector(`#${window.location.pathname.slice(1)}`);
         if(section) {
@@ -27,6 +28,7 @@ const App: React.FC = () => {
             });
           }, 500);
         }
+        setWindowLoaded(true);
       } catch(e) {
         console.error(e);
       }
