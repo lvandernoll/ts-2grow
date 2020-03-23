@@ -20,11 +20,19 @@ const Header: React.FC = () => {
     }
   }
 
+  const scrollUp = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+    window.history.replaceState(null, '', './');
+  }
+
   return (
     <header>
       <wired-card class={`${styles.header} ${collapsed ? styles.headerOpened : ''}`} elevation='5' fill={styles.mainColor}>
         <div className={styles.headerContent}>
-          <div className={styles.headerBranding}>
+          <div onClick={scrollUp} className={styles.headerBranding}>
             <img alt='2Grow logo' src={logo} className={styles.headerBrandingLogo} />
             <h1>{'2Grow'}</h1>
           </div>

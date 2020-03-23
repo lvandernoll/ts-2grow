@@ -15,7 +15,7 @@ const WayOfWorkingSection: React.FC = () =>
       </WayOfWorkingItem>
     </div>
     <div className={styles.wayOfWorkingRow}>
-      <img src={arrow1} alt='' className={styles.wayOfWorkingRowArrow} />
+      <div className={`${styles.wayOfWorkingRowArrow} ${styles.wayOfWorkingRowArrow1}`}></div>
       <WayOfWorkingItem title={'Schetsfase'}>
         {'Na dit eerste gesprek maken we twee schetsen van de tuin. Deze komen we graag bij jullie presenteren, met als doelstelling dat we dit kunnen gebruiken als vertrekpunt naar een verdere uitwerking. Om deze schetsen beeldend te maken, voegen we hier een moodboard met referentiebeelden aan toe.'}
       </WayOfWorkingItem>
@@ -24,10 +24,10 @@ const WayOfWorkingSection: React.FC = () =>
       <WayOfWorkingItem title={'Ontwerpfase'}>
         {'Na de schetsfase wordt de schets uitgewerkt naar een definitief ontwerp. Dit kan door middel van een plattegrond of door een 3D-visualisatie. Bij deze stap moeten veel keuzes gemaakt worden m.b.t. de materialen (zoals bestratingen, verlichtingen en bouwkundige constructies), maar ook de beplantingen (bomen, heesters, vaste planten). Wij inspireren jullie graag door naar een leverancier te gaan, om materialen te bekijken of eens langs een plantenkwekerij te gaan.'}
       </WayOfWorkingItem>
-      <img src={arrow2} alt='' className={styles.wayOfWorkingRowArrow} />
+      <div className={`${styles.wayOfWorkingRowArrow} ${styles.wayOfWorkingRowArrow2}`}></div>
     </div>
     <div className={styles.wayOfWorkingRow}>
-      <img src={arrow3} alt='' className={styles.wayOfWorkingRowArrow} />
+      <div className={`${styles.wayOfWorkingRowArrow} ${styles.wayOfWorkingRowArrow3}`}></div>
       <WayOfWorkingItem title={'Realisatiefase / uitvoeringsfase'}>
         {'Wij houden ons expliciet bezig met het ontwerp van de tuin en voeren dus zelf geen aanlegwerkzaamheden uit. Wel hebben we connecties die dit kunnen uitvoeren. Zo kunnen we u koppelen aan een hovenier en al snel aangeven wat het uitvoeren van het tuinontwerp gaat kosten.'}
       </WayOfWorkingItem>

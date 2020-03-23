@@ -4,6 +4,7 @@
   &Content {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
   }
 
   &Table {
@@ -20,6 +21,7 @@
 
       &Rotated {
         transform: rotate(-45deg) translate(17%, -150%);
+        white-space: nowrap;
       }
     }
 
@@ -49,7 +51,7 @@
   &Download {
     display: flex;
     flex-direction: column;
-    margin: 0 $defaultSpacing 26px $defaultSpacing;
+    margin: $defaultSpacing $defaultSpacing 26px $defaultSpacing;
     align-self: flex-end;
 
     &Header {
@@ -96,7 +98,33 @@
     }
   }
 
+  @include breakpoint(1164px) { // Where the 2 elements wrap
+    &Download {
+      margin-bottom: 0;
+    }
+  }
+
+  @include breakpoint(800px, $mobile) { // Where the text goes through the header
+    font-size: .75rem;
+
+    &Download {
+      &Block {
+        font-size: .75rem;
+      }
+
+      &Size {
+        font-size: .7rem;
+      }
+    }
+  }
+
   @include breakpoint($mobile) {
-    display: none;
+    &Table {
+      display: none;
+    }
+
+    &Download {
+      margin: 0;
+    }
   }
 }
