@@ -4,10 +4,6 @@
 @value headerHeight: #{$headerHeight};
 $headerHeightSmall: $headerHeight / 1.5;
 
-.mobileHeader {
-  display: none;
-}
-
 .header {
   height: $headerHeight;
   width: calc(100% - #{$defaultSpacing});
@@ -77,8 +73,22 @@ $headerHeightSmall: $headerHeight / 1.5;
     font-size: .75rem;
   }
 
-  @include breakpoint($mobile) {
-    width: 100%;
+  @include breakpoint($tablet) {
+    &BrandingName {
+      display: none;
+    }
+  }
+
+  @include breakpoint(855px) {
+    &NavListItemButton {
+      font-size: .9rem;
+    }
+  }
+
+  @include breakpoint(800px) {
+    &BrandingName {
+      display: block;
+    }
 
     &Nav {
       display: none;
@@ -87,5 +97,9 @@ $headerHeightSmall: $headerHeight / 1.5;
     &Opened {
       opacity: 0;
     }
+  }
+
+  @include breakpoint($mobile) {
+    width: 100%;
   }
 }

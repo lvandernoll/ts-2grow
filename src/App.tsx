@@ -1,4 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import styles from './App.module.scss';
 import Header from 'components/Header';
 import LandingSection from 'sections/Landing';
@@ -11,6 +13,8 @@ import ContactSection from 'sections/Contact';
 import PricingSection from 'sections/Pricing';
 
 const App: React.FC = () => {
+  const [scrolledDown, setScrolledDown] = useState(false);
+
   useEffect(() => {
     if(window.location.pathname !== '/') {
       try {
@@ -27,11 +31,34 @@ const App: React.FC = () => {
         console.error(e);
       }
     }
+
+    const headerHeight: number = +styles.headerHeight.slice(0, -2);
+    updateScroll(headerHeight);
+    window.addEventListener('scroll', () => updateScroll(headerHeight));
   });
+
+  const updateScroll = (headerHeight: number) => {
+    if(!scrolledDown && window.scrollY > headerHeight) {
+      setScrolledDown(true);
+    } else if(scrolledDown && window.scrollY <= headerHeight) {
+      setScrolledDown(false);
+    }
+  }
+
+  const scrollUp = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+    window.history.replaceState(null, '', './');
+  }
 
   return (
     <>
-      <Header />
+      <Header collapsed={scrolledDown} scrollUp={scrollUp} />
+      <wired-fab onClick={scrollUp} class={`${styles.icon} ${scrolledDown ? '' : styles.iconHidden}`}>
+        <FontAwesomeIcon icon={faArrowUp} className={styles.iconArrow} />
+      </wired-fab>
       <div className={styles.content}>
         <LandingSection />
         <AmbitionsSection />

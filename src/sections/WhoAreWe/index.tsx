@@ -4,7 +4,7 @@ import styles from './WhoAreWe.module.scss';
 import img from 'img/placeholder.png';
 
 const WhoAreWeSection: React.FC = () =>
-  <Section name='wie-zijn-wij' className={styles.whoAreWe}>
+  <Section name='over-ons' className={styles.whoAreWe}>
     <div className={styles.whoAreWeItem}>
       <wired-image src={img} class={styles.whoAreWeItemPortret} />
       <div className={styles.whoAreWeItemInfo}>

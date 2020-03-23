@@ -64,12 +64,12 @@
     &Content {
       position: fixed;
       cursor: auto;
-      top: 50%;
-      left: 50%;
-      width: 75%;
       background: $white;
       z-index: 2500;
-      transform: translate(-50%, -50%);
+      top: 50px;
+      left: 150px;
+      bottom: 50px;
+      width: calc(100% - 300px);
 
       &Header {
         display: flex;
@@ -86,22 +86,37 @@
 
       &Info {
         padding: $defaultSpacing;
-        overflow-y: scroll;
-        height: 100%;
+        overflow-y: auto;
+        height: calc(100% - 95px);
 
         &Description {
           white-space: pre-wrap;
-          margin-bottom: $defaultSpacing;
         }
       }
 
       &Pictures {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
+        flex-wrap: wrap;
 
         &Item {
+          margin-top: $defaultSpacing;
           width: calc(33% - #{$defaultSpacing / 2});
         }
+      }
+    }
+  }
+
+  @include breakpoint($tablet) {
+    &PopupContent {
+      width: calc(100% - 40px);
+      transform: none;
+      top: 20px;
+      left: 20px;
+      bottom: 20px;
+
+      &Info {
+        height: calc(100% - 100px);
       }
     }
   }
@@ -120,6 +135,11 @@
 
       &Info {
         height: calc(100% - 80px);
+      }
+
+      &PicturesItem {
+        width: 100%;
+        max-width: 450px;
       }
     }
   }

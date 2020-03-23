@@ -20,6 +20,8 @@ declare global {
       'wired-card': any,
       'wired-button': any,
       'wired-image': any,
+      'wired-fab': any,
+      'mwc-icon': any,
     }
   }
 }
