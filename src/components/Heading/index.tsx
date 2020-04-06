@@ -3,11 +3,12 @@ import styles from './Heading.module.scss';
 
 interface Props {
   className?: string,
+  noLine?: boolean,
 }
 
-const Heading: React.FC<Props> = ({ className, children }) => {
+const Heading: React.FC<Props> = ({ className, noLine, children }) => {
   return (
-    <h3 className={`${styles.heading} ${className ? className : ''}`}>{children}</h3>
+    <h3 className={`${styles.heading} ${noLine ? '' : styles.headingLine} ${className ? className : ''}`}>{children}</h3>
   );
 }
 

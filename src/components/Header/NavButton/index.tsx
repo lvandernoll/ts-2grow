@@ -30,7 +30,7 @@ const NavButton: React.FC<Props> = ({ sectionId, text, scrollFn }) => {
 
   return (
     <li onClick={() => scrollFn(sectionId)} onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)} className={styles.headerNavListItem}>
-      <wired-button elevation={inView ? 4 : hover ? 3 : 0} id={`${sectionId}Button`} class={styles.headerNavListItemButton}>
+      <wired-button elevation={inView ? 4 : hover ? 3 : 0} id={`${sectionId}Button`} class={`${styles.headerNavListItemButton} ${inView ? styles.headerNavListItemButtonActive : ''}`}>
         <span className={styles.headerNavListItemButtonContent}>{text}</span>
       </wired-button>
     </li>

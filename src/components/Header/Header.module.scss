@@ -58,6 +58,10 @@ $headerHeightSmall: $headerHeight / 1.5;
           font-weight: 1000;
           transition: font-size .45s ease-in-out;
 
+          &:hover, &:focus, &Active {
+            background: $secondary;
+          }
+
           &Content {
             font-weight: 900;
           }

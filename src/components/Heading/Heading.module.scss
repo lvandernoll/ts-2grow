@@ -9,7 +9,7 @@
   position: relative;
   display: inline-block;
 
-  &::before {
+  &Line::before {
     content: '';
     left: 50%;
     bottom: -5px;

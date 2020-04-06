@@ -46,7 +46,7 @@ const Header: React.FC<Props> = ({ collapsed, scrollUp }) => {
 
   return (
     <>
-      <header>
+    <header>
         <wired-card class={`${styles.header} ${collapsed ? styles.headerOpened : ''}`} elevation='5' fill={styles.mainColor}>
           <div className={styles.headerContent}>
             <div onClick={scrollUp} className={styles.headerBranding}>
