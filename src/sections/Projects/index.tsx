@@ -5,6 +5,7 @@ import Section from 'components/Section';
 import styles from './Projects.module.scss';
 import ProjectItem from './ProjectItem';
 import img from 'img/placeholder.png';
+import Heading from 'components/Heading';
 
 const ProjectsSection: React.FC = () => {
   const carousel = useRef<HTMLDivElement>(null);
@@ -39,7 +40,7 @@ const ProjectsSection: React.FC = () => {
 
   return (
     <Section name='projecten' className={styles.projects}>
-      <h3>{'Projecten'}</h3>
+      <Heading>{'Projecten'}</Heading>
       <p className={styles.projectsDescription}>{'Het afgelopen jaar hebben wij al (aantal) tuinen ontworpen en hier zijn we trots op. Laat u inspireren en neem eens een kijkje in ons portfolio.'}</p>
       <div className={styles.projectsCarousel}>
         <FontAwesomeIcon onClick={() => scroll(true)} icon={faChevronLeft}

@@ -3,12 +3,13 @@ import Section from 'components/Section';
 import styles from './Contact.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
+import Heading from 'components/Heading';
 
 const ContactSection: React.FC = () => {
   return (
     <Section name='contact' filled className={styles.contact}>
       <footer>
-        <h3>{'Contact'}</h3>
+        <Heading className={styles.contactHeader}>{'Contact'}</Heading>
         <p className={styles.contactDescription}>
           {'Bent u enthousiast geraakt over onze diensten en wilt u hier gebruik van maken, neem dan vrijblijvend contact op.'}
         </p>

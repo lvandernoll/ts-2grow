@@ -1,0 +1,22 @@
+@import 'styles/config';
+
+.heading {
+  font-size: 2rem;
+  margin-bottom: $defaultSpacing / 2;
+  margin-right: auto;
+  color: $main;
+  font-weight: 900;
+  position: relative;
+  display: inline-block;
+
+  &::before {
+    content: '';
+    left: 50%;
+    bottom: -5px;
+    width: 100px;
+    background: $secondary;
+    height: 2px;
+    position: absolute;
+    transform: translateX(-50%);
+  }
+}

@@ -4,7 +4,7 @@
 @value mainColor: #{$main};
 
 .section {
-  padding: $defaultSpacing;
+  padding: $defaultSpacing $defaultSpacing * .75;
   margin-top: $defaultSpacing;
   width: 100%;
 

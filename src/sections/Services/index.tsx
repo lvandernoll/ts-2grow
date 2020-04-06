@@ -2,11 +2,12 @@ import React from 'react';
 import Section from 'components/Section';
 import styles from './Services.module.scss';
 import AccordeonTab from 'components/AccordeonTab';
+import Heading from 'components/Heading';
 
 const ServicesSection: React.FC = () =>
   <Section name='diensten' className={styles.services}>
     <div className={styles.servicesContent}>
-      <h3>{'Diensten'}</h3>
+      <Heading>{'Diensten'}</Heading>
       <div className={styles.servicesAccordeon}>
         <AccordeonTab initialActive
           header={'Het maken van een (persoonlijk) tuinontwerp'}

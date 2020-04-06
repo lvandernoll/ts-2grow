@@ -9,7 +9,7 @@ $headerHeightSmall: $headerHeight / 1.5;
   width: calc(100% - #{$defaultSpacing});
   max-width: $siteMaxWidth;
   padding: 0 $defaultSpacing;
-  color: $secondary;
+  color: $white;
   position: fixed;
   z-index: 2000;
   left: 50%;
@@ -52,11 +52,15 @@ $headerHeightSmall: $headerHeight / 1.5;
         }
 
         &Button {
-          background: $secondary;
-          color: $black;
-          font-family: sans-serif;
+          background: $main;
+          color: $white;
           font-size: 1.05rem;
+          font-weight: 1000;
           transition: font-size .45s ease-in-out;
+
+          &Content {
+            font-weight: 900;
+          }
         }
       }
     }
@@ -86,7 +90,7 @@ $headerHeightSmall: $headerHeight / 1.5;
     }
   }
 
-  @include breakpoint(800px) {
+  @include breakpoint(850px) {
     &BrandingName {
       display: block;
     }
@@ -108,7 +112,7 @@ $headerHeightSmall: $headerHeight / 1.5;
 .hamburger {
   display: none;
 
-  @include breakpoint(800px) {
+  @include breakpoint(850px) {
     display: unset;
     opacity: 1;
     transition: opacity .45s ease-in-out;

@@ -3,11 +3,12 @@ import Section from 'components/Section';
 import styles from './Pricing.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
+import Heading from 'components/Heading';
 
 const PricingSection: React.FC = () => {
   return (
     <Section name='prijslijst' className={styles.pricing}>
-      <h3>{'Prijslijst'}</h3>
+      <Heading>{'Prijslijst'}</Heading>
       <div className={styles.pricingContent}>
         <table className={styles.pricingTable}>
           <thead>
