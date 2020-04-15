@@ -4,22 +4,22 @@
   "icons": [
     {
       "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "sizes": "128x128",
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "logo-icon.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "1281x1281"
     },
     {
-      "src": "logo512.png",
+      "src": "logo5033x2015.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "5033x2015"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#219e4a",
-  "background_color": "#ffffff"
+  "theme_color": "#55bb72",
+  "background_color": "#fbfbfb"
 }

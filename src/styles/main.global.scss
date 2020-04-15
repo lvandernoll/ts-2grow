@@ -13,6 +13,7 @@ body {
   min-height: 100vh;
   background: $white;
   padding: $sitePadding !important;
+  background-image: url('/pattern.jpg');
 
   @include breakpoint($mobile) {
     padding: 0 !important;

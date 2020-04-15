@@ -1,6 +1,7 @@
 @import 'styles/config';
 
 .landing {
+  position: relative;
   width: calc(100% + #{$defaultSpacing * 1.5});
   height: 350px;
   padding: 0 50px;
@@ -13,6 +14,18 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    right: $defaultSpacing;
+    content: '';
+    height: 125px;
+    width: 90px;
+    background-image: url('/leaf.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
   
   &Heading {
     font-size: 3.5rem;
@@ -27,6 +40,12 @@
   @include breakpoint($mobile) {
     padding: $defaultSpacing * 2 $defaultSpacing;
     height: unset;
+
+    &::after {
+      height: 75px;
+      width: 70px;
+      right: $defaultSpacing / 4;
+    }
 
     &Heading {
       font-size: 2.4rem;

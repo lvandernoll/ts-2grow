@@ -49,10 +49,9 @@ const Header: React.FC<Props> = ({ collapsed, scrollUp }) => {
     <header>
         <wired-card class={`${styles.header} ${collapsed ? styles.headerOpened : ''}`} elevation='5' fill={styles.mainColor}>
           <div className={styles.headerContent}>
-            <div onClick={scrollUp} className={styles.headerBranding}>
+            <h1 onClick={scrollUp} className={styles.headerBranding}>
               <img alt='2Grow logo' src={logo} className={styles.headerBrandingLogo} />
-              <h1 className={styles.headerBrandingName}>{'2Grow'}</h1>
-            </div>
+            </h1>
             <nav className={styles.headerNav}>
               <ul className={styles.headerNavList}>
                 <NavButton sectionId='over-ons' text='Over Ons' scrollFn={scrollToSection} />

@@ -8,6 +8,7 @@
   margin-top: $defaultSpacing;
   width: 100%;
   box-shadow : 2.83px 2.83px 8.5px rgba($black, .15);
+  background: $white;
 
   @include breakpoint($mobile) {
     margin-top: 0;
