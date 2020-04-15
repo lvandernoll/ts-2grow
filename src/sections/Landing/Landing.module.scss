@@ -1,10 +1,10 @@
 @import 'styles/config';
 
 .landing {
-  width: calc(100% + #{$defaultSpacing * 2});
+  width: calc(100% + #{$defaultSpacing * 1.5});
   height: 350px;
   padding: 0 50px;
-  margin: -#{$defaultSpacing} 0 -#{$defaultSpacing} -#{$defaultSpacing};
+  margin: -#{$defaultSpacing} 0 -#{$defaultSpacing} -#{$defaultSpacing * .75};
   background-size: 40px 40px;
   background-image: linear-gradient(to right, $grey 1px, transparent 1px),
                     linear-gradient(to bottom, $grey 1px, transparent 1px);

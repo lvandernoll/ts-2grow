@@ -13,13 +13,19 @@
     "@types/node": "^12.12.30",
     "@types/react": "^16.9.23",
     "@types/react-dom": "^16.9.5",
+    "@types/smoothscroll-polyfill": "^0.3.1",
     "node-sass": "^4.13.1",
     "react": "^16.13.0",
     "react-app-polyfill": "^1.0.6",
     "react-dom": "^16.13.0",
     "react-scripts": "3.4.0",
+    "smoothscroll-polyfill": "^0.4.4",
     "typescript": "^3.7.5",
-    "wired-elements": "^2.0.5"
+    "wired-button": "^2.0.2",
+    "wired-card": "^2.0.2",
+    "wired-elements": "^2.0.5",
+    "wired-fab": "^2.0.2",
+    "wired-image": "^2.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
