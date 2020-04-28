@@ -9,7 +9,7 @@ $headerHeightSmall: $headerHeight / 1.5;
   width: calc(100% - #{$defaultSpacing});
   max-width: $siteMaxWidth;
   padding: 0 $defaultSpacing;
-  color: $secondary;
+  color: $white;
   position: fixed;
   z-index: 2000;
   left: 50%;
@@ -35,13 +35,12 @@ $headerHeightSmall: $headerHeight / 1.5;
     cursor: pointer;
 
     &Logo {
-      height: calc(100% - 5px);
-      margin-right: 10px;
+      height: 70%;
     }
   }
 
   &Nav {
-    margin-left: 20px;
+    margin-left: 10px;
 
     &List {
       display: flex;
@@ -52,11 +51,19 @@ $headerHeightSmall: $headerHeight / 1.5;
         }
 
         &Button {
-          background: $secondary;
-          color: $black;
-          font-family: sans-serif;
+          background: $main;
+          color: $white;
           font-size: 1.05rem;
+          font-weight: 1000;
           transition: font-size .45s ease-in-out;
+
+          &:hover, &:focus, &Active {
+            background: $secondary;
+          }
+
+          &Content {
+            font-weight: 900;
+          }
         }
       }
     }
@@ -74,23 +81,7 @@ $headerHeightSmall: $headerHeight / 1.5;
     font-size: .75rem;
   }
 
-  @include breakpoint($tablet) {
-    &BrandingName {
-      display: none;
-    }
-  }
-
-  @include breakpoint(855px) {
-    &NavListItemButton {
-      font-size: .9rem;
-    }
-  }
-
-  @include breakpoint(800px) {
-    &BrandingName {
-      display: block;
-    }
-
+  @include breakpoint($headerNavMax) {
     &Nav {
       display: none;
     }
@@ -108,7 +99,7 @@ $headerHeightSmall: $headerHeight / 1.5;
 .hamburger {
   display: none;
 
-  @include breakpoint(800px) {
+  @include breakpoint($headerNavMax) {
     display: unset;
     opacity: 1;
     transition: opacity .45s ease-in-out;
@@ -121,7 +112,7 @@ $headerHeightSmall: $headerHeight / 1.5;
       color: transparent;
       z-index: 2100;
       position: fixed;
-      top: $defaultSpacing;
+      top: $defaultSpacing * 1.15;
       right: $defaultSpacing;
       height: 50px;
       width: 50px;

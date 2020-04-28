@@ -98,7 +98,7 @@
     }
   }
 
-  @include breakpoint(1164px) { // Where the 2 elements wrap
+  @include breakpoint(1063px) { // Where the 2 elements wrap
     &Download {
       margin-bottom: 0;
     }

@@ -2,10 +2,11 @@ import React from 'react';
 import Section from 'components/Section';
 import WayOfWorkingItem from './WayOfWorkingItem';
 import styles from './WayOfWorking.module.scss';
+import Heading from 'components/Heading';
 
 const WayOfWorkingSection: React.FC = () =>
   <Section name='werkwijze' className={styles.wayOfWorking}>
-    <h3>{'Werkwijze'}</h3>
+    <Heading>{'Werkwijze'}</Heading>
     <div className={styles.wayOfWorkingRow}>
       <WayOfWorkingItem title={'Kennismaken'}>
         {'Wanneer jullie gebruik willen maken van onze diensten, komen we graag eens langs voor een oriënterend gesprek. Tijdens dit gesprek kunnen we jullie wensen inventariseren, maar ook laten zien wat we voor jullie kunnen betekenen.'}

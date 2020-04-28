@@ -3,8 +3,8 @@
 @value mainColor: #{$main};
 
 .wayOfWorking {
-  width: calc(100% + #{$defaultSpacing * 2});
-  margin: -#{$defaultSpacing} 0 -#{$defaultSpacing} -#{$defaultSpacing};
+  width: calc(100% + #{$defaultSpacing * 1.5});
+  margin: -#{$defaultSpacing} 0 -#{$defaultSpacing} -#{$defaultSpacing * .75};
   padding: $defaultSpacing;
   display: flex;
   flex-direction: column;

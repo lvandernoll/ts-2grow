@@ -3,6 +3,10 @@
 .contact {
   color: $white;
 
+  &Header {
+    color: $white;
+  }
+
   &Description {
     max-width: 620px;
     margin: $defaultSpacing / 2 0;

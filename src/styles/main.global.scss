@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lemonada&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import './vendor/reset.css';
 @import './config';
 
@@ -13,13 +13,9 @@ body {
   min-height: 100vh;
   background: $white;
   padding: $sitePadding !important;
+  background-image: url('/pattern.jpg');
 
   @include breakpoint($mobile) {
     padding: 0 !important;
   }
-}
-
-h3 {
-  font-size: 2rem !important;
-  margin-bottom: $defaultSpacing / 2 !important;
 }
