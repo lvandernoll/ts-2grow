@@ -10,7 +10,7 @@ const WhoAreWeSection: React.FC = () =>
       <wired-image src={img} class={styles.whoAreWeItemPortret} />
       <div className={styles.whoAreWeItemInfo}>
         <h3 className={styles.whoAreWeItemInfoName}>
-          <span>{'Chris de Rijke'}</span>
+          <span>{'Jane Doe'}</span>
           <span className={styles.whoAreWeItemInfoNameDash}>{' - '}</span>
           <span className={styles.whoAreWeItemInfoNameTitle}>{'ontwerper & technisch ontwerper'}</span>
         </h3>
@@ -27,7 +27,7 @@ const WhoAreWeSection: React.FC = () =>
       <wired-image src={img} class={styles.whoAreWeItemPortret} />
       <div className={styles.whoAreWeItemInfo}>
         <h3 className={styles.whoAreWeItemInfoName}>
-          <span>{'Nico van der Noll'}</span>
+          <span>{'John Doe'}</span>
           <span className={styles.whoAreWeItemInfoNameDash}>{' - '}</span>
           <span className={styles.whoAreWeItemInfoNameTitle}>{'3D ontwerper'}</span>
         </h3>
